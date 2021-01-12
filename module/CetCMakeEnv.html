@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CetCMakeEnv &mdash; cetmodules 2.07.00 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CetCMakeUtils" href="CetCMakeUtils.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="CetCMakeConfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> cetmodules
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../manual/cetmodules-modules.7.html">cetmodules-modules(7)</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../manual/cetmodules-modules.7.html#utility-modules">Utility Modules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CetCMakeEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CetCMakeUtils.html">CetCMakeUtils</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-modules.7.html#find-modules">Find Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FindCatch2.html">FindCatch2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="FindCatch2.html#imported-targets">Imported Targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FindCatch2.html#result-variables">Result Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="FindCppUnit.html">FindCppUnit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-modules.7.html#compatibility-modules">Compatibility Modules</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-modules.7.html#compatibility-find-modules">Compatibility Find Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="compat/FindTBB.html">FindTBB / Findtbb</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="compat/FindTBB.html#imported-targets">Imported Targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="compat/FindTBB.html#result-variables">Result Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="compat/FindTBB.html#cache-variables">Cache Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="compat/Findcatch.html">Findcatch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="compat/Findcatch.html#result-variables">Result Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="compat/Findcatch.html#variables-controlling-behavior">Variables controlling behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="compat/Findcppunit.html">FindCppUnit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/cetmodules-project-variables.7.html">cetmodules-project-variables(7)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/cetmodules-variables.7.html">cetmodules-variables(7)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-variables.7.html#variables-that-change-behavior">Variables that Change Behavior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../variable/BUILD_STATIC_LIBS.html">BUILD_STATIC_LIBS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../variable/WANT_UPS.html">WANT_UPS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cetmodules</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../manual/cetmodules-modules.7.html">cetmodules-modules(7)</a> &raquo;</li>
+        
+      <li>CetCMakeEnv</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/module/CetCMakeEnv.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cetcmakeenv">
+<span id="module:CetCMakeEnv"></span><h1>CetCMakeEnv<a class="headerlink" href="#cetcmakeenv" title="Permalink to this headline">¶</a></h1>
+<p>This module defines the principal boostrap function
+<span class="target" id="index-0-command:cet_cmake_env"></span><a class="reference internal" href="#command:cet_cmake_env" title="cet_cmake_env"><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">cet_cmake_env()</span></code></a> defining the cetmodules build environment for
+the current project.</p>
+<dl class="cmake command">
+<dt id="command:cet_cmake_env">
+<code class="sig-name descname">cet_cmake_env</code><a class="headerlink" href="#command:cet_cmake_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the cetmodules build environment for the current project.</p>
+<dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_cmake_env(</span><span class="p">[</span><span class="no">NO_INSTALL_PKGMETA</span><span class="p">]</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Options:</strong></dt><dd><dl class="std option">
+<dt id="cmdoption-arg-NO_INSTALL_PKGMETA">
+<span id="cmdoption-arg-no-install-pkgmeta"></span><code class="sig-name descname">NO_INSTALL_PKGMETA</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-arg-NO_INSTALL_PKGMETA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Under normal circumstances, <code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">cet_cmake_env()</span></code> will
+call <span class="target" id="index-0-command:install_pkgmeta"></span><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">install_pkgmeta()</span></code> to automatically find
+<code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> and <code class="docutils literal notranslate"><span class="pre">README</span></code> files and install them. Specify
+<code class="docutils literal notranslate"><span class="pre">NO_INSTALL_PKGMETA</span></code> if you wish to call
+<span class="target" id="index-1-command:install_pkgmeta"></span><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">install_pkgmeta()</span></code> yourself (or not at all).</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prior to calling <span class="target" id="index-1-command:cet_cmake_env"></span><a class="reference internal" href="#command:cet_cmake_env" title="cet_cmake_env"><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">cet_cmake_env()</span></code></a>:</p>
+<ul class="simple">
+<li><p>The current project must have been initialized via
+<span class="target" id="index-0-command:cmake:command:project"></span><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">project()</span></code></p></li>
+<li><p>Any initial or override values for
+<span class="target" id="index-0-manual:cetmodules-project-variables.7"></span><code class="xref cmake cmake-manual docutils literal notranslate"><span class="pre">cetmodules-project-variables.7</span></code> should be set.</p></li>
+</ul>
+</div>
+</dd>
+<dt><strong>Variables controlling behavior</strong></dt><dd><ul class="simple">
+<li><p><span class="target" id="index-0-variable:WANT_UPS"></span><a class="reference internal" href="../variable/WANT_UPS.html#variable:WANT_UPS" title="WANT_UPS"><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">WANT_UPS</span></code></a></p></li>
+<li><p><span class="target" id="index-0-variable:cmake:variable:BUILD_SHARED_LIBS"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">BUILD_SHARED_LIBS</span></code></p></li>
+<li><p><span class="target" id="index-0-variable:BUILD_STATIC_LIBS"></span><a class="reference internal" href="../variable/BUILD_STATIC_LIBS.html#variable:BUILD_STATIC_LIBS" title="BUILD_STATIC_LIBS"><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">BUILD_STATIC_LIBS</span></code></a></p></li>
+<li><p><span class="target" id="index-0-variable:cmake:variable:CMAKE_INSTALL_RPATH_USE_LINK_PATH"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">CMAKE_INSTALL_RPATH_USE_LINK_PATH</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2021, Fermi Alliance LLC.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CetCMakeUtils &mdash; cetmodules 2.07.00 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="CetCopy.html" />
+    <link rel="prev" title="CetCMakeEnv" href="CetCMakeEnv.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> cetmodules
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../manual/cetmodules-modules.7.html">cetmodules-modules(7)</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../manual/cetmodules-modules.7.html#utility-modules">Utility Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CetCMakeEnv.html">CetCMakeEnv</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CetCMakeUtils</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-modules.7.html#find-modules">Find Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FindCatch2.html">FindCatch2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="FindCatch2.html#imported-targets">Imported Targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FindCatch2.html#result-variables">Result Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="FindCppUnit.html">FindCppUnit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-modules.7.html#compatibility-modules">Compatibility Modules</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-modules.7.html#compatibility-find-modules">Compatibility Find Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="compat/FindTBB.html">FindTBB / Findtbb</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="compat/FindTBB.html#imported-targets">Imported Targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="compat/FindTBB.html#result-variables">Result Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="compat/FindTBB.html#cache-variables">Cache Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="compat/Findcatch.html">Findcatch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="compat/Findcatch.html#result-variables">Result Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="compat/Findcatch.html#variables-controlling-behavior">Variables controlling behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="compat/Findcppunit.html">FindCppUnit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/cetmodules-project-variables.7.html">cetmodules-project-variables(7)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/cetmodules-variables.7.html">cetmodules-variables(7)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manual/cetmodules-variables.7.html#variables-that-change-behavior">Variables that Change Behavior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../variable/BUILD_STATIC_LIBS.html">BUILD_STATIC_LIBS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../variable/WANT_UPS.html">WANT_UPS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cetmodules</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../manual/cetmodules-modules.7.html">cetmodules-modules(7)</a> &raquo;</li>
+        
+      <li>CetCMakeUtils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/module/CetCMakeUtils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cetcmakeutils">
+<span id="module:CetCMakeUtils"></span><h1>CetCMakeUtils<a class="headerlink" href="#cetcmakeutils" title="Permalink to this headline">¶</a></h1>
+<p>General functions and macros.</p>
+<dl class="cmake command">
+<dt id="command:cet_passthrough">
+<code class="sig-name descname">cet_passthrough</code><a class="headerlink" href="#command:cet_passthrough" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_passthrough(</span><span class="p">[</span><span class="no">FLAG</span><span class="p">|</span><span class="no">ARMOR</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="no">KEYWORD</span><span class="w"> </span><span class="nv">&lt;keyword&gt;</span><span class="p">]</span><span class="w"> </span><span class="nv">&lt;in_var&gt;</span><span class="w"> </span><span class="no">IN_PLACE</span><span class="p">|</span><span class="nv">&lt;out-var&gt;</span><span class="nf">)</span><span class="w"></span>
+<span class="nf">cet_passthrough(</span><span class="p">[</span><span class="no">FLAG</span><span class="p">|</span><span class="no">ARMOR</span><span class="p">]</span><span class="w"> </span><span class="no">VALUES</span><span class="w"> </span><span class="p">[</span><span class="nv">&lt;val&gt;...</span><span class="p">]</span><span class="w"> </span><span class="no">KEYWORD</span><span class="w"> </span><span class="nv">&lt;keyword&gt;</span><span class="w"> </span><span class="nv">&lt;out-var&gt;</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Turn a flag or option value into something that can be passed on to
+another function or macro.</p>
+</dd>
+<dt><strong>Options:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ARMOR</span></code></p>
+<blockquote>
+<div><p>Apply an extra `layer of armor’ (“\” -&gt; “\\”) to enable the
+result to be passed to another function without quoting in order
+to preserve empty-list semantics. See
+<span class="target" id="index-0-command:cet_armor_string"></span><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">cet_armor_string()</span></code> for details.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">FLAG</span></code></p>
+<blockquote>
+<div><p>If <code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">VALUES</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>, the result
+is <code class="docutils literal notranslate"><span class="pre">&lt;keyword&gt;</span></code> (or see <code class="docutils literal notranslate"><span class="pre">KEYWORD</span></code>, below). Otherwise the
+result will be <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code></p>
+<blockquote>
+<div><p>If <code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code> is specified this option signifies that the
+result will be placed in <code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code>. In this case <code class="docutils literal notranslate"><span class="pre">&lt;out-var&gt;</span></code>
+must then <em>not</em> be present.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">KEYWORD</span> <span class="pre">&lt;keyword&gt;</span></code></p>
+<blockquote>
+<div><p>If specified, the option keyword will be
+<code class="docutils literal notranslate"><span class="pre">&lt;keyword&gt;</span></code>. Otherwise, if <code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code> is specified, then it
+will be the name “<code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code>” with any leading <code class="docutils literal notranslate"><span class="pre">&lt;word&gt;_</span></code>
+stripped off the front. Failing that, the name “<code class="docutils literal notranslate"><span class="pre">&lt;out-var&gt;</span></code>”
+will be used as the default.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">VALUES</span> <span class="pre">&lt;val&gt;...</span></code></p>
+<blockquote>
+<div><p>The values to be passed through to another function or macro may
+be specified as <code class="docutils literal notranslate"><span class="pre">&lt;val&gt;...</span></code> rather than as <code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code>. In this
+case, :option:&lt;out-var&gt;` is required and <code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> is not
+permitted.</p>
+</div></blockquote>
+</dd>
+<dt><strong>Non-option arguments:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code></p>
+<blockquote>
+<div><p>The name of a variable holding the values to be passed
+through. <code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code> must <em>not</em> be present if <code class="docutils literal notranslate"><span class="pre">VALUES</span></code> is
+specified.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;out-var&gt;</span></code></p>
+<blockquote>
+<div><p>The name of a variable to hold the values in passthrough form. If
+<code class="docutils literal notranslate"><span class="pre">IN_PLACE</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;in-var&gt;</span></code> are both specified, than
+<code class="docutils literal notranslate"><span class="pre">&lt;out-var&gt;</span></code> must <em>not</em> be present.</p>
+</div></blockquote>
+</dd>
+<dt><strong>Examples</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_passthrough(</span><span class="no">FLAG</span><span class="w"> </span><span class="no">IN_PLACE</span><span class="w"> </span><span class="no">MYOPTS_VERBOSE</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">MYOPTS_VERBOSE</span></code> will have the value “VERBOSE” in the calling
+function or macro.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_passthrough(</span><span class="no">FLAG</span><span class="w"> </span><span class="no">VALUES</span><span class="w"> </span><span class="s">&quot;NOTFOUND&quot;</span><span class="w"> </span><span class="no">USE_MYPACKAGE</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">USE_MYPACKAGE</span></code> will be empty in the calling function or macro.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_passthrough(</span><span class="no">FLAG</span><span class="w"> </span><span class="no">VALUES</span><span class="w"> </span><span class="s">&quot;MYTEXT&quot;</span><span class="w"> </span><span class="no">USE_MYPACKAGE</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">USE_MYPACKAGE</span></code> will have the value <code class="docutils literal notranslate"><span class="pre">USE_MYPACKAGE</span></code> in the
+calling function or macro.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_passthrough(</span><span class="no">IN_PLACE</span><span class="w"> </span><span class="no">VALUES</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;Mary had a little lamb; Its fleece was white as snow&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="no">KEYWORD</span><span class="w"> </span><span class="no">RHYME</span><span class="w"> </span><span class="no">MARY_LAMB</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The list <code class="docutils literal notranslate"><span class="pre">MARY_LAMB</span></code> will have the values:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;RHYME&quot; &quot;Mary had a little lamb&quot; &quot;Its fleece was white as snow&quot;</span>
+</pre></div>
+</div>
+<p>in the calling function or macro. Note the lack of whitespace at
+the beginning of the third element of the list.</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_passthrough(</span><span class="no">IN_PLACE</span><span class="w"> </span><span class="no">VALUES</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;Mary had a little lamb\\\\; Its fleece was white as snow&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="no">KEYWORD</span><span class="w"> </span><span class="no">RHYME</span><span class="w"> </span><span class="no">MARY_LAMB</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The list <code class="docutils literal notranslate"><span class="pre">MARY_LAMB</span></code> will have the values:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;RHYME&quot; &quot;Mary had a little lamb; Its fleece was white as snow&quot;</span>
+</pre></div>
+</div>
+<p>in the calling function or macro.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cmake command">
+<dt id="command:cet_source_file_extensions">
+<code class="sig-name descname">cet_source_file_extensions</code><a class="headerlink" href="#command:cet_source_file_extensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce an ordered list of source file extensions for enabled
+languages.</p>
+<dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_source_file_extensions(</span><span class="nv">&lt;out-var&gt;</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Non-option arguments:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prescribed order of enabled languages: <code class="docutils literal notranslate"><span class="pre">CUDA</span></code> <code class="docutils literal notranslate"><span class="pre">CXX</span></code> <code class="docutils literal notranslate"><span class="pre">C</span></code>
+<code class="docutils literal notranslate"><span class="pre">Fortran</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;lang&gt;...</span></code> <code class="docutils literal notranslate"><span class="pre">ASM</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="cmake command">
+<dt id="command:cet_exclude_files_from">
+<code class="sig-name descname">cet_exclude_files_from</code><a class="headerlink" href="#command:cet_exclude_files_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove duplicates and other files from a list, specifically or by
+regular expression.</p>
+<dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_exclude_files_from(</span><span class="nv">&lt;list&gt;</span><span class="w"> </span><span class="p">[</span><span class="no">REGEX</span><span class="w"> </span><span class="nv">&lt;regex&gt;...</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">[</span><span class="no">NOP</span><span class="p">]</span><span class="w"> </span><span class="nv">&lt;file&gt;...</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Options:</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">NOP</span></code></p>
+<blockquote>
+<div><p>Optional separator between a list option and non-option
+arguments; no other effect.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">REGEX</span></code></p>
+<blockquote>
+<div><p>Entries in <code class="docutils literal notranslate"><span class="pre">&lt;list&gt;</span></code> matching <code class="docutils literal notranslate"><span class="pre">&lt;regex&gt;...</span></code> will be removed.</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Non-option arguments:</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;list&gt;</span></code></p>
+<blockquote>
+<div><p>The name of a list of files to be pruned</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;file&gt;...</span></code></p>
+<blockquote>
+<div><p>Files to be removed from <code class="docutils literal notranslate"><span class="pre">&lt;list&gt;</span></code> (exact matches only).</p>
+</div></blockquote>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relative paths are interpreted relative to
+<code class="docutils literal notranslate"><span class="pre">${CMAKE_CURRENT_SOURCE_DIR}</span></code>.</p>
+</div>
+</dd></dl>
+
+<dl class="cmake command">
+<dt id="command:cet_timestamp">
+<code class="sig-name descname">cet_timestamp</code><a class="headerlink" href="#command:cet_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a current timestamp.</p>
+<dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_timestamp(</span><span class="nv">&lt;out-var&gt;</span><span class="w"> </span><span class="p">[</span><span class="nv">&lt;fmt&gt;</span><span class="p">]</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Non-option arguments:</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;out-var&gt;</span></code></p>
+<blockquote>
+<div><p>Variable in which to store the formatted timestamp.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;fmt&gt;</span></code></p>
+<blockquote>
+<div><p>The desired format of the timestamp, using <code class="docutils literal notranslate"><span class="pre">%</span></code> placeholders
+according to <a class="reference external" href="https://cmake.org/cmake/help/v3.18/command/string.html#timestamp" title="(in CMake v3.18.5)"><span class="xref std std-ref">string(TIMESTAMP)</span></a>. In addition, timezone
+placeholders <code class="docutils literal notranslate"><span class="pre">%Z</span></code> and <code class="docutils literal notranslate"><span class="pre">%z</span></code> are interpreted according to your
+system’s <strong class="command">date</strong> command.</p>
+</div></blockquote>
+</div></blockquote>
+<dl>
+<dt><strong>Examples:</strong></dt><dd><ul>
+<li><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_timestamp(</span><span class="no">RESULT</span><span class="nf">)</span><span class="w"></span>
+<span class="nf">message(</span><span class="no">STATUS</span><span class="w"> </span><span class="s">&quot;${RESULT}&quot;</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">Sun</span> <span class="pre">Jan</span> <span class="pre">01</span> <span class="pre">23:59:59</span> <span class="pre">CST</span> <span class="pre">1970</span></code></p>
+</li>
+<li><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_timestamp(</span><span class="no">RESULT</span><span class="w"> </span><span class="s">&quot;%Y-%m-%d %H:%M:%S %z&quot;</span><span class="nf">)</span><span class="w"></span>
+<span class="nf">message(</span><span class="no">STATUS</span><span class="w"> </span><span class="s">&quot;${RESULT}&quot;</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">1970-01-01</span> <span class="pre">23:59:59</span> <span class="pre">-0600</span></code></p>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.07.00: </span>Prior to version 2.07.00, “%Y” was missing from the default
+format.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><span class="target" id="index-0-command:cmake:command:string(timestamp)"></span><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">string(TIMESTAMP)</span></code>, <strong class="command">date</strong></p>
+</div>
+</dd></dl>
+
+<dl class="cmake command">
+<dt id="command:cet_find_simple_package">
+<code class="sig-name descname">cet_find_simple_package</code><a class="headerlink" href="#command:cet_find_simple_package" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="target" id="index-0-command:cmake:command:find_package"></span><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">find_package()</span></code> for
+packages without generated CMake config files or a <code class="docutils literal notranslate"><span class="pre">Find&lt;name&gt;.cmake</span></code>
+module.</p>
+<dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">find_simple_package(</span><span class="p">[</span><span class="no">HEADERS</span><span class="w"> </span><span class="nv">&lt;header&gt;...</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">[</span><span class="no">INCPATH_SUFFIXES</span><span class="w"> </span><span class="nv">&lt;dir&gt;...</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="no">INCPATH_VAR</span><span class="w"> </span><span class="nv">&lt;var&gt;</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">[</span><span class="no">LIB_VAR</span><span class="w"> </span><span class="nv">&lt;var&gt;</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="no">LIBNAMES</span><span class="w"> </span><span class="nv">&lt;libname&gt;...</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">[</span><span class="no">LIBPATH_SUFFIXES</span><span class="w"> </span><span class="nv">&lt;dir&gt;...</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="nv">&lt;name&gt;</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Options:</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">HEADERS</span> <span class="pre">&lt;header&gt;...</span></code></p>
+<blockquote>
+<div><p>Look for <code class="docutils literal notranslate"><span class="pre">&lt;header&gt;...</span></code> to ascertain the include path. If not
+specified, use <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;.{h,hh,H,hxx,hpp}</span></code></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">INCPATH_SUFFIXES</span> <span class="pre">&lt;dir&gt;...</span></code></p>
+<blockquote>
+<div><p>Add <code class="docutils literal notranslate"><span class="pre">&lt;suffix&gt;...</span></code> to paths when searching for headers (defaults
+to “include”).</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">INCPATH_VAR</span> <span class="pre">&lt;var&gt;</span></code></p>
+<blockquote>
+<div><p>Store the found include path in <code class="docutils literal notranslate"><span class="pre">&lt;var&gt;</span></code>. If not specified, we
+invoke <span class="target" id="index-0-command:cmake:command:include_directories"></span><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">include_directories()</span></code> with the found include path.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">LIB_VAR</span> <span class="pre">&lt;var&gt;</span></code></p>
+<blockquote>
+<div><p>Store the found library as <code class="docutils literal notranslate"><span class="pre">&lt;var&gt;</span></code>. If not specified, use
+<code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> as converted to an upper case identifier.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">LIBNAMES</span> <span class="pre">&lt;libname&gt;...</span></code></p>
+<blockquote>
+<div><p>Look for <code class="docutils literal notranslate"><span class="pre">&lt;libname&gt;...</span></code> as a library in addition to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">LIBPATH_SUFFIXES</span> <span class="pre">&lt;dir&gt;...</span></code></p>
+<blockquote>
+<div><p>Add <code class="docutils literal notranslate"><span class="pre">&lt;dir&gt;...</span></code> to paths when searching for libraries.</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Non-option arguments:</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code></p>
+<blockquote>
+<div><p>The primary name of the library (without prefix or suffix) or
+headers to be found.</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Variables controlling behavior:</strong></p>
+<blockquote>
+<div><p><span class="target" id="index-0-variable:WANT_INCLUDE_DIRECTORIES"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">WANT_INCLUDE_DIRECTORIES</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="cmake command">
+<dt id="command:cet_localize_pv">
+<code class="sig-name descname">cet_localize_pv</code><a class="headerlink" href="#command:cet_localize_pv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure that all fragment-type <span class="target" id="index-0-manual:cetmodules-project-variables.7"></span><code class="xref cmake cmake-manual docutils literal notranslate"><span class="pre">project</span> <span class="pre">variables</span></code> are absolute in the current
+directory scope for in-tree project <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;</span></code>.</p>
+<dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_localize_pv(</span><span class="nv">&lt;project&gt;</span><span class="w"> </span><span class="p">[</span><span class="nv">&lt;project-var-name&gt;</span><span class="p">]</span><span class="nf">)</span><span class="w"></span>
+
+<span class="nf">cet_localize_pv(</span><span class="nv">&lt;project&gt;</span><span class="w"> </span><span class="no">ALL</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Non-option arguments:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;project&gt;</span></code></p>
+<blockquote>
+<div><p>The name of a CMake project in the current source tree.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;project-var-name&gt;</span></code></p>
+<blockquote>
+<div><p>The name of a project variable (without a <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;_</span></code> prefix).</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cmake command">
+<dt id="command:cet_localize_pv_all">
+<code class="sig-name descname">cet_localize_pv_all</code><a class="headerlink" href="#command:cet_localize_pv_all" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_localize_pv_all(</span><span class="nv">&lt;project&gt;</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Equivalent to <span class="target" id="index-0-command:cet_localize_pv"></span><a class="reference internal" href="#command:cet_localize_pv" title="cet_localize_pv"><code class="xref cmake cmake-command docutils literal notranslate"><span class="pre">cet_localize_pv(&lt;project&gt;</span> <span class="pre">ALL)</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cmake command">
+<dt id="command:cet_cmake_module_directories">
+<code class="sig-name descname">cet_cmake_module_directories</code><a class="headerlink" href="#command:cet_cmake_module_directories" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt><strong>Synopsis:</strong></dt><dd><div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nf">cet_cmake_module_directories(</span><span class="p">[</span><span class="no">NO_CONFIG</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="no">NO_LOCAL</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="no">PROJECT</span><span class="w"> </span><span class="nv">&lt;project&gt;</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="nv">&lt;dir&gt;...</span><span class="nf">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Options:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">NO_CONFIG</span></code></p>
+<blockquote>
+<div><p>Do not add these directories to
+<span class="target" id="index-0-variable:cmake:variable:CMAKE_MODULE_PATH"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code>
+in the CMake config file for <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;</span></code>.</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">NO_CONFIG</span></code></p>
+<blockquote>
+<div><blockquote>
+<div><p>Do not add these directories to 
+<span class="target" id="index-1-variable:cmake:variable:CMAKE_MODULE_PATH"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">CMAKE_MODULE_PATH</span></code>
+in the current scope. Implied if <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;</span></code> is not equal to
+<span class="target" id="index-0-variable:cmake:variable:PROJECT_NAME"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">PROJECT_NAME</span></code></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">PROJECT</span> <span class="pre">&lt;project&gt;</span></code></p>
+<blockquote>
+<div><p>Specify the project to which these module directories belong. If
+not specifed, <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;</span></code> defaults to
+<span class="target" id="index-1-variable:cmake:variable:PROJECT_NAME"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">PROJECT_NAME</span></code>.</p>
+</div></blockquote>
+</div></blockquote>
+</dd>
+<dt><strong>Non-option arguments:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;dir&gt;...</span></code></p>
+<p>Directories containing CMake modules.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2021, Fermi Alliance LLC.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

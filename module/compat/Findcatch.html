@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Findcatch &mdash; cetmodules 2.07.00 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Findcetbuildtools.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="FindUpsRoot.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> cetmodules
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../manual/cetmodules-modules.7.html">cetmodules-modules(7)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../manual/cetmodules-modules.7.html#utility-modules">Utility Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../CetCMakeEnv.html">CetCMakeEnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CetCMakeUtils.html">CetCMakeUtils</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../manual/cetmodules-modules.7.html#find-modules">Find Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../FindCatch2.html">FindCatch2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../FindCatch2.html#imported-targets">Imported Targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FindCatch2.html#result-variables">Result Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../FindCppUnit.html">FindCppUnit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../manual/cetmodules-modules.7.html#compatibility-modules">Compatibility Modules</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../manual/cetmodules-modules.7.html#compatibility-find-modules">Compatibility Find Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="FindTBB.html">FindTBB / Findtbb</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="FindTBB.html#imported-targets">Imported Targets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FindTBB.html#result-variables">Result Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FindTBB.html#cache-variables">Cache Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Findcatch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#result-variables">Result Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variables-controlling-behavior">Variables controlling behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Findcppunit.html">FindCppUnit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/cetmodules-project-variables.7.html">cetmodules-project-variables(7)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/cetmodules-variables.7.html">cetmodules-variables(7)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../manual/cetmodules-variables.7.html#variables-that-change-behavior">Variables that Change Behavior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../variable/BUILD_STATIC_LIBS.html">BUILD_STATIC_LIBS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../variable/WANT_UPS.html">WANT_UPS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes/index.html">Release Notes</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">cetmodules</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../manual/cetmodules-modules.7.html">cetmodules-modules(7)</a> &raquo;</li>
+        
+      <li>Findcatch</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/module/compat/Findcatch.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="findcatch">
+<span id="module:Findcatch"></span><h1>Findcatch<a class="headerlink" href="#findcatch" title="Permalink to this headline">¶</a></h1>
+<p>Find module shim for Catch2 using its UPS product name (<code class="docutils literal notranslate"><span class="pre">catch</span></code>).</p>
+<p>Incorporates the behavior of <span class="target" id="index-0-module:FindCatch2"></span><a class="reference internal" href="../FindCatch2.html#module:FindCatch2" title="FindCatch2"><code class="xref cmake cmake-module docutils literal notranslate"><span class="pre">FindCatch2</span></code></a>.</p>
+<div class="section" id="result-variables">
+<h2>Result Variables<a class="headerlink" href="#result-variables" title="Permalink to this headline">¶</a></h2>
+<p>The following variables may be defined:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">catch_FOUND</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">catch_VERSION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CATCH</span></code> - see <span class="target" id="index-0-variable:&lt;PROJECT-NAME&gt;_OLD_STYLE_CONFIG_VARS"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">&lt;PROJECT-NAME&gt;_OLD_STYLE_CONFIG_VARS</span></code></p></li>
+</ul>
+</td></tr></table>
+</div>
+<div class="section" id="variables-controlling-behavior">
+<h2>Variables controlling behavior<a class="headerlink" href="#variables-controlling-behavior" title="Permalink to this headline">¶</a></h2>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><span class="target" id="index-1-variable:&lt;PROJECT-NAME&gt;_OLD_STYLE_CONFIG_VARS"></span><code class="xref cmake cmake-variable docutils literal notranslate"><span class="pre">&lt;PROJECT-NAME&gt;_OLD_STYLE_CONFIG_VARS</span></code></p></li>
+</ul>
+</td></tr></table>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><span class="target" id="index-1-module:FindCatch2"></span><a class="reference internal" href="../FindCatch2.html#module:FindCatch2" title="FindCatch2"><code class="xref cmake cmake-module docutils literal notranslate"><span class="pre">FindCatch2</span></code></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2010-2021, Fermi Alliance LLC.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
